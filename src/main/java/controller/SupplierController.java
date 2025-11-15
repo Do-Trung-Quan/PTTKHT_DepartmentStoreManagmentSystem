@@ -79,7 +79,7 @@ public class SupplierController extends HttpServlet {
         List<Supplier> suppliers = supplierDAO.searchSupplierByName(name);
 
         if (suppliers.isEmpty()) {
-            request.setAttribute("message", "⚠️ Không tìm thấy nhà cung cấp nào.");
+//            request.setAttribute("message", "⚠️ Không tìm thấy nhà cung cấp nào.");
             request.getSession().setAttribute("suppliers", suppliers);
         } else {
             // 🟢 Tạm lưu list vào session để chọn supplier từ list đó
