@@ -21,3 +21,15 @@ Considering two modules and answering questions
 ● Customer registers as a member: selects the member registration menu → enters customer information, clicks add → the system saves to the database.
 
 ● Management staff imports goods from suppliers: selects the import menu → find suppliers by name (if not, add a new one) → Repeats the following steps for all imported goods: selects search for items by name (if not already available, then add new) → enters quantity + unit price → repeats until all the imported goods are finished, then submits → prints out the invoice
+
+
+*Tech Stack*:
+
+Back: java, servlet
+Front: JSP,HTML5, CSS3, JS
+Database: MySQL
+
+
+*Run*:
+
+clone về -> tạo db trong MySQL (lưu ý thông tin kết nối trong DAO) -> mở và chạy trong NetBeans (khuyến nghị)
