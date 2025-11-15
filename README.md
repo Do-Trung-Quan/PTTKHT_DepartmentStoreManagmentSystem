@@ -26,7 +26,9 @@ Considering two modules and answering questions
 *Tech Stack*:
 
 Back: java, servlet
+
 Front: JSP,HTML5, CSS3, JS
+
 Database: MySQL
 
 
