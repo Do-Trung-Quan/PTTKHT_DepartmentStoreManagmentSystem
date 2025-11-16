@@ -78,28 +78,41 @@ function initAddFormValidation() {
 }
 
 /* === 3. Kiểm tra dữ liệu nhập trong bảng Selected Item === */
-function validateAndSubmit(form) {
+function validateAndSubmit(input) {
+    const form = input.form;
     const price = parseFloat(form.importUnitPrice.value);
     const qty = parseInt(form.quantity.value);
 
     if (isNaN(price) || isNaN(qty)) {
         alert("⚠️ Giá trị nhập không hợp lệ!");
+        resetField(input);
         return false;
     }
     if (price < 0 || qty < 1) {
         alert("⚠️ Giá phải không âm & số lượng phải lớn hơn 0!");
+        resetField(input);
         return false;
     }
     if (price > 1000000000) {
         alert("⚠️ Giá không được vượt quá 1.000.000.000!");
+        resetField(input);
         return false;
     }
     if (qty > 1000) {
         alert("⚠️ Số lượng không được vượt quá 1000!");
+        resetField(input);
         return false;
     }
 
     form.submit();
+}
+
+function resetField(input) {
+    if (input.name === "importUnitPrice") {
+        input.value = 0;
+    } else if (input.name === "quantity") {
+        input.value = 1;
+    }
 }
 
 /* === 4. Xử lý chọn hàng trong bảng Selected Item + nút Remove === */

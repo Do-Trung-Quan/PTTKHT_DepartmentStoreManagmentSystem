@@ -148,16 +148,16 @@
                                    name="importUnitPrice"
                                    value="<%= formattedValue %>"
                                    min="0" max="1000000000"
-                                   onchange="validateAndSubmit(this.form); saveScrollPos();" class="input-inline">
+                                   onchange="validateAndSubmit(this); saveScrollPos();" class="input-inline">
                         </td>
                         <td>
                             <input type="number" name="quantity" value="<%= ip.getQuantity() %>"
                                    min="1" max="1000"
-                                   onchange="validateAndSubmit(this.form); saveScrollPos();" class="input-inline">
+                                   onchange="validateAndSubmit(this); saveScrollPos();" class="input-inline">
                         </td>
                         <td>
                             <input type="text" name="note" value="<%= ip.getNote()%>"
-                                   onchange="validateAndSubmit(this.form); saveScrollPos();" class="input-inline">
+                                   onchange="validateAndSubmit(this); saveScrollPos();" class="input-inline">
                         </td>
                         <td><%= String.format("%,.0f", ip.getImportPrice()) %></td>
                     </form>
